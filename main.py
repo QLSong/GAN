@@ -66,8 +66,8 @@ while epoch[0] < 200:
     
     
 def imshow(tensor, title=None):
-    image = tensor.clone().cpu()  # we clone the tensor to not do changes on it
-    image = image.view(3, 256, 256)  # remove the fake batch dimension
+    image = tensor.clone().cpu()  
+    image = image.view(3, 256, 256) 
     image = unloader(image)
     plt.imshow(image)
     if title is not None:
